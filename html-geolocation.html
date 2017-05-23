@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation</title>
+</head>
+<body>
+<!-- getCurrentPosition : return current position
+     watchPosition : return updated position as the user moves     -->
+     
+    <h3>Click here to get the current location</h3>
+    <button onclick="getLocation()">Click me</button>
+    <p id="demo"></p>
+    
+    <script>
+        var x = document.getElementById("demo");
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{
+                x.innerHTML = "Your devide doesn't support geolocation."
+            }
+        }
+        
+        function showPosition(position){
+            x.innerHTML = 
+                "Latitude : " + position.coords.latitude +
+                "<br> Longitude : " + position.coords.longitude + 
+                "<br> Accuracy : " + position.coords.accuracy +
+                "<br> Altitude : " + position.coords.altitude +
+                "<br> Altitude Accuracy : " + position.coords.altitudeAccuracy + 
+                "<br> Speed : " + position.coords.speed + 
+                "<br> Heading : " + position.coords.heading+ 
+                "<br> Time stamp : " + position.timestamp; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+    
+        <fieldset>
+        
+            <legend>Personal Information </legend>
+           
+            First Name<br><input type="text" name="firstname" value="Rajeev"> <br>
+            Last Name<br><input type="text" name="lastname" value="Ranjan"> <br>
+            
+            Submit<input type="submit" value="submit">
+        
+        </fieldset>
+        
+        <select name="Company">
+        
+            <option value="Infosys">Infosys</option>
+            <option value="Accenture">Accenture</option>
+            <option value="Wipro" selected>Wipro</option>
+        
+        </select>
+        
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Safari">
+            <option value="Opera">
+        </datalist>
+        <input type="submit">
+        
+        <input type="range" value="marks" min="0" max="100">
+    
+    </form>
+    
+</body>
+</html>

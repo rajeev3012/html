@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script>
+			function movein(obj){
+				obj.style.backgroundColor = "#00FFFF";
+				obj.innerHTML= "This is IT!";
+				
+			}
+			function moveout(obj){
+				obj.style.backgroundColor = "#00FF00";
+				obj.innerHTML = "Change Now!";
+				
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div 	onmouseover = "movein(this)" 
+				onmouseout = "moveout(this)" 
+				style="
+					background-color:red;
+					width:500px;
+					height:200px
+					padding:300px;">
+		Move Over ME
+		</div>
+	</body>
+</html>

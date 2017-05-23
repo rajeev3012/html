@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+    
+    <script>
+    function clickCounter(){
+        
+        if(typeof(Storage) !== "undefined"){
+            if(localStorage.clickcount){
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+            }
+            else{
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button" +localStorage.clickcount+ "times";
+        }
+        else{
+            document.getElementById("result").innerHTML = "Your Brwoser doesn't support local Storage";
+        }
+        
+    }
+        
+    
+    
+    </script>
+</head>
+<body>
+   
+  
+    <div id="result"></div>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    
+</body>
+</html>
