@@ -1,0 +1,4 @@
+ION broadband setup
+DNS
+Primary - 8.8.8.8 
+Secondary - 114.79.129.2
