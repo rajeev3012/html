@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas HTML5</title>
+
+	<style>
+		#myCanvas, #myCanvas1, #myCanvas2, #myCanvas3{
+			border:1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<!-- Line -->
+	<canvas id="myCanvas" width="500" height="200"></canvas>
+	<canvas id="myCanvas3" width="400" height="400"></canvas>
+	<br>
+	<canvas id="myCanvas1" width="300" height="300"></canvas>
+	<br>
+	
+	<br>
+	<canvas id="myCanvas2" width="300" height="100"></canvas>
+
+	<script>
+		// Canvas Line
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext('2d');
+
+		ctx.moveTo(0, 0);
+		ctx.lineTo(200, 200);
+		ctx.lineTo(200, 0);
+		ctx.lineTo(500, 200);
+		ctx.lineTo(0, 0);
+		ctx.stroke();
+
+		//Canvas1 Circle
+		var c1 = document.getElementById("myCanvas1");
+		var ctx1 = c1.getContext('2d');
+
+		ctx1.beginPath();
+		ctx1.arc(150, 150, 100, 0, 2*Math.PI);
+		ctx1.arc(150, 150, 110, 0, 2*Math.PI);
+		ctx1.stroke();
+
+		//Canvas2 Text
+		var c2 = document.getElementById("myCanvas2");
+		var ctx2 = c2.getContext('2d');
+
+		ctx2.font = "40px Arial";
+		ctx2.fillText("Rajeev Ranjan", 10, 50);
+		ctx2.strokeText("Web Developer", 10, 50);
+
+		//Canvas 3 Star Line
+		var c3 = document.getElementById("myCanvas3");
+		var ctx3 = c3.getContext('2d');
+
+		ctx3.moveTo(100, 300);
+		ctx3.lineTo(200, 100);
+		ctx3.lineTo(300, 300);
+		ctx3.lineTo(50, 150);
+		ctx3.lineTo(350, 150);
+		ctx3.lineTo(100, 300);
+		ctx3.stroke();
+	</script>
+</body>
+</html>
